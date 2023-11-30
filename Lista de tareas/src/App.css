@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--rojo: #ba181b;
+	--azul: #00b4d8;
+	--azul-hover: #48cae4;
+	--rojo-hover: #e5383b;
+	--verde: #09a129;
+	--verde-hover: #2aa745; 
+	--dark-mode: rgb(59, 59, 59);
+
+	--main-color       : #52A5E0;
+	--title-color      : #EFF3F5; 
+	--text-color       : #C8CDD0; 
+	--light-text-color : #A0A7AC; 
+	--border-color     : #2A3B47;
+	--container-color  : #212E36;
+	--body-color       : #192229;
+}
+
+body {
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	max-width: 1200px;
+	margin: 40px auto;
+	display: flex;
+	justify-content: center;
+	background-color:  var(--body-color);
+	color: var(--text-color);
+}
+
+.card-to-do {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.575);
+	padding: 25px;
+	border-radius: 20px;
+	width: 700px;
+	border-color: var(--border-color);
+}
+
+h1 {
+	text-align: center;
+	color: var(--title-color);
+}
+
+.counter-todos {
+	margin: 40px 0;
+	display: flex;
+	justify-content: space-around;
+
+}
+
+.counter-todos h3 {
+	font-weight: 500;
+}
+
+.counter-todos span {
+	color: var(--verde-hover);
+	font-weight: 700;
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+ul {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+ul li {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+}
+
+ul li span {
+	overflow: hidden;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+ul li form {
+	flex: 1;
+	display: flex;
+	justify-content: space-between;
+}
+
+.input-update {
+	border: none;
+	font-weight: 500;
+	font-family: inherit;
+	font-size: 18px;
+	color: var(--text-color);
+	width: 100%;
+	background-color: var(--container-color);
+	outline: none;
+}
+
+.container-done {
+	background-color: var(--container-color);
+	width: 24px;
+	height: 24px;
+	border-radius: 20px;
+	border: 2px solid var(--main-color);
+	cursor: pointer;
+}
+
+.container-done.active {
+	background-color: var(--main-color);
+}
+
+.text-decoration-dashed {
+	text-decoration: line-through;
+}
+
+.btn-delete {
+	background-color: var(--rojo);
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-delete:hover {
+	background-color: var(--rojo-hover);
+}
+
+.btn-edit {
+	background-color: var(--azul);
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-edit:hover {
+	background-color: var(--azul-hover);
+}
+
+form {
+	display: flex;
+	gap: 20px;
+}
+
+.add-todo h3 {
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 24px;
+}
+
+.input-add {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
+	flex: 1;
+	font-family: inherit;
+	font-size: 17px;
+	color: var(--light-text-color);
+	background-color: var(--container-color);
+}
+
+.btn-add {
+	border: none;
+	background-color: var(--verde);
+	color: #fff;
+	padding: 5px 40px;
+	border-radius: 20px;
+	font-family: inherit;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.btn-add:hover {
+	background-color: var(--verde-hover);
+}
